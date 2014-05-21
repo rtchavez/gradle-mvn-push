@@ -102,7 +102,6 @@ afterEvaluate { project ->
     }
 
     task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-        failOnError false
         classifier = 'javadoc'
         from androidJavadocs.destinationDir
     }
