@@ -97,6 +97,10 @@ afterEvaluate { project ->
         source = android.sourceSets.main.allJava
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
         
+        options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PRIVATE
+        options.links("http://docs.oracle.com/javase/7/docs/api/");
+        options.links("http://developer.android.com/reference/reference/");
+        
         exclude '**/BuildConfig.java'
         exclude '**/R.java'
     }
