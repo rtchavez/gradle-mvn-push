@@ -107,7 +107,6 @@ afterEvaluate { project ->
     }
 
     task androidSourcesJar(type: Jar) {
-        failOnError false
         classifier = 'sources'
         from android.sourceSets.main.allSource
     }
