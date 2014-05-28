@@ -43,6 +43,9 @@ afterEvaluate { project ->
     uploadArchives {
         repositories {
             mavenDeployer {
+                
+                setUniqueVersion(false)
+                
                 beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
 
                 pom.groupId = GROUP
